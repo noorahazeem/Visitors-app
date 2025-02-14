@@ -40,17 +40,18 @@ public class Basetest {
 			driver.quit();
 		}
 	}
+	 //common method to log in as different users
+    protected void loginAs(String role) {
+        String username = prop.getProperty(role+"_username");
+        String password = prop.getProperty(role+"_password");
+
+        loginpage.enterUsername(username);
+        loginpage.enterPassword(password);
+        loginpage.viewButtonClick();
+        loginpage.clickLoginButton();
+
+    }
 	
-	//common method to log in as different users
-	protected void loginAs(String role) {
-		String username = prop.getProperty(role+"_username");
-		String password = prop.getProperty(role+"_password");
-		
-		loginpage.enterUsername(username);
-		loginpage.enterPassword(password);
-		loginpage.viewButtonClick();
-		loginpage.clickLoginButton();
-		
-	}
+	
 }
 

@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -48,15 +49,16 @@ public class Addvisit {
 		place.sendKeys("Trivandrum");
 	}
 	public void inst_state() throws InterruptedException {
-		
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);");
-		WebElement state=driver.findElement(By.xpath("//div[@class=' css-1jqq78o-placeholder' and @id ='react-select-11-placeholder']"));
-		Thread.sleep(1000);  // Small delay for smooth scrolling
+	    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);");
+	    WebElement state = driver.findElement(By.xpath("//div[contains(@id, 'react-select-11-placeholder')]"));
+	    state.click();
+	    Thread.sleep(1000);
 
-		state.click();
-		WebElement selectstate=driver.findElement(By.xpath("//input[@id='react-select-10-input']"));
-		selectstate.click();
+	    WebElement selectState = driver.findElement(By.xpath("//input[contains(@id, 'react-select-10-input')]"));
+	    selectState.sendKeys("Kerala");
+	    selectState.sendKeys(Keys.ENTER);
 	}
+
 	public void  inst_dist() {
 		WebElement district=driver.findElement(By.xpath("(//div[text()='Select...'])[8]"));
 		district.click();
