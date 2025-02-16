@@ -2,36 +2,38 @@
 <testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-13T10:21:43 IST" name="Default suite" finished-at="2025-02-13T10:22:22 IST" duration-ms="39233">
+  <suite started-at="2025-02-16T00:05:28 IST" name="Default suite" finished-at="2025-02-16T00:05:52 IST" duration-ms="24009">
     <groups>
     </groups>
-    <test started-at="2025-02-13T10:21:43 IST" name="Default test" finished-at="2025-02-13T10:22:22 IST" duration-ms="39233">
-      <class name="testcases.AddvisitTest">
-        <test-method is-config="true" signature="config()[pri:0, instance:testcases.AddvisitTest@1165b38]" started-at="2025-02-13T10:21:43 IST" name="config" finished-at="2025-02-13T10:21:57 IST" duration-ms="14593" status="PASS">
+    <test started-at="2025-02-16T00:05:28 IST" name="Default test" finished-at="2025-02-16T00:05:52 IST" duration-ms="24009">
+      <class name="testcases.UpcomingVisitTest">
+        <test-method is-config="true" signature="config()[pri:0, instance:testcases.UpcomingVisitTest@1165b38]" started-at="2025-02-16T00:05:28 IST" name="config" finished-at="2025-02-16T00:05:36 IST" duration-ms="7445" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- config -->
-        <test-method signature="testAddvisitmanager()[pri:1, instance:testcases.AddvisitTest@1165b38]" started-at="2025-02-13T10:21:57 IST" name="testAddvisitmanager" finished-at="2025-02-13T10:22:01 IST" duration-ms="4008" status="FAIL">
-          <exception class="org.openqa.selenium.JavascriptException">
+        <test-method signature="verifyVisitManager()[pri:1, instance:testcases.UpcomingVisitTest@1165b38]" started-at="2025-02-16T00:05:36 IST" name="verifyVisitManager" finished-at="2025-02-16T00:05:40 IST" duration-ms="4396" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
-              <![CDATA[javascript error: Cannot read properties of undefined (reading 'scrollIntoView')
-  (Session info: chrome=133.0.6943.59)
+              <![CDATA[element click intercepted: Element <button class="text-blue-700 flex items-center space-x-1">...</button> is not clickable at point (1215, 577). Other element would receive the click: <div id="static-modal" data-modal-backdrop="static" tabindex="-1" aria-hidden="false" class="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full bg-gray-800 bg-opacity-50 h-full flex">...</div>
+  (Session info: chrome=133.0.6943.98)
 Build info: version: '4.27.0', revision: 'd6e718d134'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d221ac765c7987b7ebea3677d4aec52b, executeScript {args=[], script=arguments[0].scrollIntoView(true);}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.59, chrome: {chromedriverVersion: 133.0.6943.98 (da53563ceb66..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51786}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51786/devtoo..., se:cdpVersion: 133.0.6943.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d221ac765c7987b7ebea3677d4aec52b]]>
+Command: [78bb3cae83050efdefaaa457eeeb0098, clickElement {id=f.706F47F522B1357920940899FD78E6C6.d.E03C5967C8E199E71EF62C64BD937128.e.99}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.98, chrome: {chromedriverVersion: 133.0.6943.98 (da53563ceb66..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63073}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63073/devtoo..., se:cdpVersion: 133.0.6943.98, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (78bb3cae83050efdefaaa457eeeb0098)] -> xpath: (//button[@class='text-blue-700 flex items-center space-x-1'])[4]]
+Session ID: 78bb3cae83050efdefaaa457eeeb0098]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.JavascriptException: javascript error: Cannot read properties of undefined (reading 'scrollIntoView')
-  (Session info: chrome=133.0.6943.59)
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button class="text-blue-700 flex items-center space-x-1">...</button> is not clickable at point (1215, 577). Other element would receive the click: <div id="static-modal" data-modal-backdrop="static" tabindex="-1" aria-hidden="false" class="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full bg-gray-800 bg-opacity-50 h-full flex">...</div>
+  (Session info: chrome=133.0.6943.98)
 Build info: version: '4.27.0', revision: 'd6e718d134'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d221ac765c7987b7ebea3677d4aec52b, executeScript {args=[], script=arguments[0].scrollIntoView(true);}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.59, chrome: {chromedriverVersion: 133.0.6943.98 (da53563ceb66..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51786}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51786/devtoo..., se:cdpVersion: 133.0.6943.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d221ac765c7987b7ebea3677d4aec52b
+Command: [78bb3cae83050efdefaaa457eeeb0098, clickElement {id=f.706F47F522B1357920940899FD78E6C6.d.E03C5967C8E199E71EF62C64BD937128.e.99}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.98, chrome: {chromedriverVersion: 133.0.6943.98 (da53563ceb66..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63073}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63073/devtoo..., se:cdpVersion: 133.0.6943.98, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (78bb3cae83050efdefaaa457eeeb0098)] -> xpath: (//button[@class='text-blue-700 flex items-center space-x-1'])[4]]
+Session ID: 78bb3cae83050efdefaaa457eeeb0098
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -42,9 +44,11 @@ at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.ja
 at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:476)
-at pages.Addvisit.inst_state(Addvisit.java:52)
-at testcases.AddvisitTest.testAddvisitmanager(AddvisitTest.java:31)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at pages.UpcomingVisit.viewData(UpcomingVisit.java:34)
+at pages.UpcomingVisit.updateformDisplay(UpcomingVisit.java:56)
+at testcases.UpcomingVisitTest.verifyVisitManager(UpcomingVisitTest.java:27)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -73,33 +77,33 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.JavascriptException -->
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testAddvisitmanager -->
-        <test-method signature="testAddvisitassociate()[pri:2, instance:testcases.AddvisitTest@1165b38]" started-at="2025-02-13T10:22:01 IST" name="testAddvisitassociate" finished-at="2025-02-13T10:22:21 IST" duration-ms="20024" status="FAIL">
+        </test-method> <!-- verifyVisitManager -->
+        <test-method signature="verifyVisitAssociate()[pri:2, instance:testcases.UpcomingVisitTest@1165b38]" started-at="2025-02-16T00:05:40 IST" name="verifyVisitAssociate" finished-at="2025-02-16T00:05:50 IST" duration-ms="10030" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//input[@name='userId']"}
-  (Session info: chrome=133.0.6943.59)
+  (Session info: chrome=133.0.6943.98)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.27.0', revision: 'd6e718d134'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d221ac765c7987b7ebea3677d4aec52b, findElement {value=//input[@name='userId'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.59, chrome: {chromedriverVersion: 133.0.6943.98 (da53563ceb66..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51786}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51786/devtoo..., se:cdpVersion: 133.0.6943.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d221ac765c7987b7ebea3677d4aec52b]]>
+Command: [78bb3cae83050efdefaaa457eeeb0098, findElement {using=xpath, value=//input[@name='userId']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.98, chrome: {chromedriverVersion: 133.0.6943.98 (da53563ceb66..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63073}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63073/devtoo..., se:cdpVersion: 133.0.6943.98, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 78bb3cae83050efdefaaa457eeeb0098]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@name='userId']"}
-  (Session info: chrome=133.0.6943.59)
+  (Session info: chrome=133.0.6943.98)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.27.0', revision: 'd6e718d134'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d221ac765c7987b7ebea3677d4aec52b, findElement {value=//input[@name='userId'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.59, chrome: {chromedriverVersion: 133.0.6943.98 (da53563ceb66..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51786}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51786/devtoo..., se:cdpVersion: 133.0.6943.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d221ac765c7987b7ebea3677d4aec52b
+Command: [78bb3cae83050efdefaaa457eeeb0098, findElement {using=xpath, value=//input[@name='userId']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.98, chrome: {chromedriverVersion: 133.0.6943.98 (da53563ceb66..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63073}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63073/devtoo..., se:cdpVersion: 133.0.6943.98, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 78bb3cae83050efdefaaa457eeeb0098
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -114,9 +118,9 @@ at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(Elemen
 at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-at pages.Loginpage.enterUsername(Loginpage.java:22)
-at base.Basetest.loginAs(Basetest.java:49)
-at testcases.AddvisitTest.testAddvisitassociate(AddvisitTest.java:41)
+at pages.Loginpage.enterUsername(Loginpage.java:17)
+at base.Basetest.loginAs(Basetest.java:48)
+at testcases.UpcomingVisitTest.verifyVisitAssociate(UpcomingVisitTest.java:41)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -148,12 +152,12 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testAddvisitassociate -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testcases.AddvisitTest@1165b38]" started-at="2025-02-13T10:22:21 IST" name="teardown" finished-at="2025-02-13T10:22:22 IST" duration-ms="472" status="PASS">
+        </test-method> <!-- verifyVisitAssociate -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testcases.UpcomingVisitTest@1165b38]" started-at="2025-02-16T00:05:50 IST" name="teardown" finished-at="2025-02-16T00:05:52 IST" duration-ms="1927" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- testcases.AddvisitTest -->
+      </class> <!-- testcases.UpcomingVisitTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

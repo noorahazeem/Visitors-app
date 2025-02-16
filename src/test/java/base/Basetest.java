@@ -27,7 +27,7 @@ public class Basetest {
 	@BeforeTest
 	public void config()  throws IOException {
 		setup();
-		driver=new ChromeDriver();
+		driver =new ChromeDriver();
 		//driver=new FirefoxDriver();
 		driver.get(prop.getProperty("url"));
 		driver.manage().window().maximize();

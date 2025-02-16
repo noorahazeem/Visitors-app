@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.AddvisitTest">
+      <class name="testcases.UpcomingVisitTest">
         <methods>
-          <include name="testAddvisitassociate"/>
-          <include name="testAddvisitmanager"/>
+          <include name="verifyVisitManager"/>
+          <include name="verifyVisitAssociate"/>
           <include name="config"/>
           <include name="teardown"/>
         </methods>
-      </class> <!-- testcases.AddvisitTest -->
+      </class> <!-- testcases.UpcomingVisitTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

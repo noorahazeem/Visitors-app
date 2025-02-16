@@ -51,5 +51,46 @@ public class Loginpage {
             WebElement prfl= driver.findElement(By.xpath("//img[contains(@src, '/profile/')]"));
             prfl.click();
         }
+        public void forgotPassword() {
+        	WebElement forgot=driver.findElement(By.xpath("//p[text()='Forgotpassword?']"));
+        	forgot.click();
+        }
+        public boolean emailpopupisDisplayed() {
+        	try {
+        		WebElement emailpop=driver.findElement(By.xpath("//h3[text()='Forgot Your Password']"));
+        		return emailpop.isDisplayed();
+        	}catch(Exception e) {
+        		return false;
+        	}
+        }
+        public void provideEmail() {
+        	WebElement email=driver.findElement(By.xpath("//input[@name='email']"));
+        	email.sendKeys("dummymail@gmail.com");
+        	WebElement nextbtn=driver.findElement(By.xpath("//button[text()='Next']"));
+        	nextbtn.click();
+        }
+        public boolean sendmailpopDisplayed() {
+        	try {
+        		WebElement popup=driver.findElement(By.xpath("//p[text()='If your email is registered with us, you will receive a password reset link shortly.']"));
+        		return popup.isDisplayed();
+        	}catch(Exception e) {
+        		return false;
+        	}
+        }
+        public void close_popup() {
+        	WebElement close=driver.findElement(By.xpath("//button[text()='Close']"));
+        	close.click();
+        }
+        public String blankUserid( ) {
+            WebElement uname = driver.findElement(By.xpath("//p[text()='Please enter the user id']"));
+            String userid=uname.getText();
+            return userid;
+        }
+        public String blankPass() {
+            WebElement pwd = driver.findElement(By.xpath("//p[text()='Please enter the password']"));
+            String pass=pwd.getText();
+            return pass;
+        }
+           
 
     }
