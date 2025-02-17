@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="testcases.MilestoneTest">
+        <methods>
+          <include name="verifyDisplaymanager"/>
+          <include name="config"/>
+          <include name="verifyDisplayassociate"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- testcases.MilestoneTest -->
+      <class name="testcases.Logintest">
+        <methods>
+          <include name="loginAsManager"/>
+          <include name="blankCredentials"/>
+          <include name="object"/>
+          <include name="loginAsAssociate"/>
+          <include name="invalidCredentials"/>
+          <include name="forgotPasssword"/>
+          <include name="config"/>
+          <include name="setupObjects"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- testcases.Logintest -->
+      <class name="testcases.AddvisitTest">
+        <methods>
+          <include name="testAddVisitManager"/>
+          <include name="config"/>
+          <include name="testAddVisitAssociate"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- testcases.AddvisitTest -->
+      <class name="testcases.DashboardTest">
+        <methods>
+          <include name="verifyDashboardAsManager"/>
+          <include name="config"/>
+          <include name="teardown"/>
+          <include name="verifyDashboardAsAssociate"/>
+        </methods>
+      </class> <!-- testcases.DashboardTest -->
+      <class name="testcases.VisitlogTest">
+        <methods>
+          <include name="visitlogAsManager"/>
+          <include name="visitlogAsAssociate"/>
+          <include name="config"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- testcases.VisitlogTest -->
+      <class name="testcases.ContactPersonTest">
+        <methods>
+          <include name="verifyAddContactManager"/>
+          <include name="config"/>
+          <include name="teardown"/>
+          <include name="verifyAddContactAssociate"/>
+        </methods>
+      </class> <!-- testcases.ContactPersonTest -->
+      <class name="testcases.ProfileViewtest">
+        <methods>
+          <include name="testProfileViewManager"/>
+          <include name="config"/>
+          <include name="teardown"/>
+          <include name="testProfileViewAssociate"/>
+        </methods>
+      </class> <!-- testcases.ProfileViewtest -->
+      <class name="testcases.AddinsititutionTest">
+        <methods>
+          <include name="config"/>
+          <include name="teardown"/>
+          <include name="addInstitutionAsAssociate"/>
+          <include name="addInstitutionAsManager"/>
+        </methods>
+      </class> <!-- testcases.AddinsititutionTest -->
+      <class name="testcases.UpcomingVisitTest">
+        <methods>
+          <include name="verifyVisitManager"/>
+          <include name="verifyVisitAssociate"/>
+          <include name="config"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- testcases.UpcomingVisitTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

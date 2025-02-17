@@ -10,55 +10,44 @@ import pages.Loginpage;
 import pages.VisitLogs;
 
 public class VisitlogTest extends Basetest {
-	VisitLogs visit;
-	Loginpage login;
-	
+    VisitLogs visit;
+    Loginpage login;
+    
     @Test(priority = 1)
     public void visitlogAsManager() {
-        loginAs("manager");  // Login using common method
-        visit=new VisitLogs(driver);
-        
-        visit.click_logs();
-        visit.isDisplayed();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        Assert.assertTrue(visit.isDisplayed(), "Visit Logs page is not displayed");
-        System.out.println("Manager Visit Logs loaded properly");
-
-        
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        visit.clickExportCSV();
-        // Verify CSV Download
-        Assert.assertTrue(visit.isCSVDownloaded(), "CSV file was not downloaded!");
-        System.out.println("CSV download succesful");
-        visit.add_visit();
-        System.out.println("Add visit done");
-        
-        login=new Loginpage(driver);
-        login.prflClick();
-        login.profile_logout();
-        
-        
+        visitlogAsRole("manager");
     }
+
     @Test(priority = 2)
     public void visitlogAsAssociate() {
-        loginAs("associate");  // Login using common method
-        visit=new VisitLogs(driver);
+        visitlogAsRole("associate");
+    }
+
+    // Reusable method for both roles
+    public void visitlogAsRole(String role) {
+        loginAs(role);  // Login using common method
         
+        visit = new VisitLogs(driver);
         visit.click_logs();
         visit.isDisplayed();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         Assert.assertTrue(visit.isDisplayed(), "Visit Logs page is not displayed");
-        System.out.println("associate Visit Logs loaded properly");
+        System.out.println(role + " Visit Logs loaded properly");
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         visit.clickExportCSV();
         
         // Verify CSV Download
         Assert.assertTrue(visit.isCSVDownloaded(), "CSV file was not downloaded!");
-        System.out.println("CSV download succesful");
-        
-        login=new Loginpage(driver);
-        login.associateClick();
+        System.out.println("CSV download successful");
+
+        //logout
+        login = new Loginpage(driver);
+        if (role.equals("manager")) {
+            login.prflClick();
+        } else {
+            login.associateClick();
+        }
         login.profile_logout();
     }
 }

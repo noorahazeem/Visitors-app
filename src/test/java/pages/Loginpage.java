@@ -91,6 +91,20 @@ public class Loginpage {
             String pass=pwd.getText();
             return pass;
         }
-           
-
+        public void invalidUserData() {
+        	WebElement userid=driver.findElement(By.xpath("//input[@name='userId']"));
+        	userid.sendKeys("invslidcred@gmail.com");
+        	WebElement pass=driver.findElement(By.xpath("//input[@name='password']"));
+        	pass.sendKeys("invalid@password");
+        	
+        }
+        public boolean invalidCred() {
+        	try {
+        	WebElement invalid=driver.findElement(By.xpath("//div[@class='Toastify__toast-container Toastify__toast-container--top-right']"));
+        	return invalid.isDisplayed();
+        }catch (Exception e) {
+        	return false;
+        }
+        }      
+        	
     }

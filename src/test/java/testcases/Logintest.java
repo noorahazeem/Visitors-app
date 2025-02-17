@@ -61,4 +61,14 @@ public class Logintest    extends Basetest {
     		System.out.println(obj.blankPass());
     		Assert.assertEquals(actpass,AutomationConstants.password );
         }
+        @Test(priority=5)
+        public void invalidCredentials() {
+        	obj.invalidUserData();
+        	obj.clickLoginButton();
+        	System.out.println("Login clicked");
+        	Assert.assertTrue(obj.invalidCred(), "Error msg not displayed");
+        	System.out.println("Error msg displayed properrly");
+        	
+        	
+        }
     }
